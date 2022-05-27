@@ -1,4 +1,4 @@
-const int SETUP_TIME = 7000; //7000
+const int SETUP_TIME = 300; //7000
 const int AUTONOMOUS_TIME = 15000;  //15000
 const int STOP_TIME = 2000;  //2000
 
@@ -78,8 +78,8 @@ void loop()
     //LEAVE THIS BLANK
     //setMode();
     //SET MODE HERE
-    LEFT = true;
-    //RIGHT = true;
+    //LEFT = true;
+    RIGHT = true;
   }
   else if(mil<AUTONOMOUS_TIME+SETUP_TIME)
   {
@@ -137,13 +137,15 @@ void turnRight()
 int cooldown = 50;
 //adjust the values behind the plus sign for each part of the track
 int line1 = SETUP_TIME + 700; //a1a2
-int turn1 = line1 + 70; //a2 to a3 //70 with full battery
+
+int turn1 = line1 + 50; //a2 to a3 //70 with full battery
 int line2 = turn1 + 400; //a3
-int turn2 = line2 + 70; //a3 to a4
+int turn2 = line2 + 50; //a3 to a4
 int line3 = turn2 + 700; //a4a5
 int turn3 = line3 + 100; //a5 to a6 //test this
 int line4 = turn3 + 700; //a6a7
 int turn4 = line4 + 85; //a7 to a8 //test this
+
 
 //adjust the speeds to make the motors turn properly
 void autoMode()
@@ -152,7 +154,7 @@ void autoMode()
   if(mil < line1)
   {
     //full speed forward
-    leftForward(205); //if 110 it moves in a straighter line
+    leftForward(110); //if 110 it moves in a straighter line
     rightForward(255);
   }
   else if(mil < turn1)
