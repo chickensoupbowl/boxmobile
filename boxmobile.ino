@@ -1,5 +1,5 @@
-const int SETUP_TIME = 7000; //7000
-const int AUTONOMOUS_TIME = 15000;  //15000
+const int SETUP_TIME = 0; //7000
+const int AUTONOMOUS_TIME = 0;  //15000
 const int STOP_TIME = 2000;  //2000
 
 int left_motor_forward;
@@ -105,6 +105,7 @@ void autonomousMode()
 //you MUST write this method
 void teleOpMode()
 {
+  testPhotos();
   photoMove();
 }
 //WRITE CODE IN HERE:  YOU SHOULD MAKE EVERY MOTOR STOP
@@ -316,17 +317,17 @@ void photoMove(){
   leftBackward(205);
   rightBackward(255);
   }
-  else if(photo1 > 850){
+  else if(photo1 > 750){
   //turn right
   leftForward(150);
   rightBackward(200);
   }
-  else if(photo3 > 700){
+  else if(photo3 > 600){
   //go forward
     leftForward(170);
     rightForward(255);
   }
-  else if(photo2 > 650){
+  else if(photo2 > 800){
   //turn left
   leftBackward(150);
   rightForward(200);
