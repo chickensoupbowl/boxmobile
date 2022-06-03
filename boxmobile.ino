@@ -1,5 +1,5 @@
-const int SETUP_TIME = 0; //7000
-const int AUTONOMOUS_TIME = 0;  //15000
+const int SETUP_TIME = 7000; //7000
+const int AUTONOMOUS_TIME = 15000;  //15000
 const int STOP_TIME = 2000;  //2000
 
 int left_motor_forward;
@@ -14,6 +14,7 @@ int leftB; //BLUE
 int rightB; //YELLOW
 
 int photos[] = {A0, A1, A2, A3};
+
 
 //modes
 bool LEFT;
